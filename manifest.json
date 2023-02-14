@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "OneClickSearch",
+    "author": "nite",
+    "version": "1.0",
+
+    "browser_action":{
+        "default_icon": {
+            "32": "icon32.png"
+          }
+    },
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "js": [ "content_script.js" ]
+        }
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+  
+    "permissions": [
+        "tabs"
+    ]
+  }
